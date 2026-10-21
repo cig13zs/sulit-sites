@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kusina ni Aling Rosa — Carinderia sa Project 4, Quezon City</title>
+<meta name="description" content="Araw-araw na lutong bahay sa Project 4, QC. Adobo, sinigang, inihaw na bangus, pancit. Umorder sa Facebook o text, pwede deliver sa barangay.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23C94F14'/%3E%3Cpath d='M10 20h12a6 6 0 0 1-12 0z' fill='%23fff'/%3E%3Cpath d='M13 13c0-2 1-2 1-4M17 13c0-2 1-2 1-4' stroke='%23fff' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#FFF9F1; --card:#FFFFFF; --ink:#3B2314; --muted:#8A6D58;
+    --line:#EFDFCC; --accent:#C94F14; --accent-dark:#9C3A0B; --cream:#FFF3E2;
+    --shadow:0 10px 28px rgba(59,35,20,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .display{font-family:Georgia,"Times New Roman",serif;line-height:1.15;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,249,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-weight:700;font-size:1.06rem;text-decoration:none}
+  .brand svg{flex:none}
+  .nav-links{display:flex;gap:26px;font-size:.93rem}
+  .nav-links a{text-decoration:none;color:var(--muted);font-weight:600}
+  .nav-links a:hover{color:var(--accent)}
+  .btn{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-solid{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(201,79,20,.28)}
+  .btn-solid:hover{background:var(--accent-dark)}
+  .btn-ghost-light{border-color:rgba(255,255,255,.55);color:#fff}
+  .btn-outline{border-color:var(--accent);color:var(--accent)}
+  .burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+  .burger span{display:block;height:2.5px;background:var(--ink);margin:6px 8px;border-radius:2px}
+  .mobile-menu{display:none;border-top:1px solid var(--line);padding:14px 22px 20px;flex-direction:column;gap:14px;background:var(--bg)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{text-decoration:none;font-weight:700;color:var(--ink)}
+
+  /* hero */
+  .hero{position:relative;color:#fff;overflow:hidden}
+  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(38,18,6,.88) 8%,rgba(38,18,6,.62) 48%,rgba(38,18,6,.25))}
+  .hero-inner{position:relative;z-index:2;padding:104px 0 118px}
+  .eyebrow{display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#FFD9AE;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,3.7rem);max-width:640px;color:#FFF7EB;margin-bottom:18px}
+  .hero p.sub{max-width:520px;font-size:1.08rem;color:#F3E2CE;margin-bottom:30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .chips{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{font-size:.83rem;font-weight:600;background:rgba(255,249,241,.14);border:1px solid rgba(255,249,241,.3);border-radius:999px;padding:6px 14px;color:#FFEFD9}
+
+  /* fact strip */
+  .facts{background:var(--accent-dark);color:#FFE8CF}
+  .facts .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;font-size:.9rem;font-weight:600}
+  .facts span+span{border-left:1px solid rgba(255,232,207,.35);padding-left:18px}
+
+  section{padding:74px 0}
+  .sec-head{margin-bottom:36px}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:8px}
+  .sec-head p{color:var(--muted);max-width:560px}
+  .sec-head.center{text-align:center}
+  .sec-head.center p{margin:0 auto}
+
+  /* menu */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .dish{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;box-shadow:var(--shadow)}
+  .dish-row{display:flex;align-items:baseline;gap:8px}
+  .dish-row .name{font-family:Georgia,serif;font-size:1.18rem;font-weight:700}
+  .dish-row .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+  .dish-row .price{font-weight:800;color:var(--accent);white-space:nowrap}
+  .dish p{font-size:.9rem;color:var(--muted);margin-top:6px}
+  .menu-note{margin-top:22px;font-size:.92rem;color:var(--muted)}
+
+  /* steps */
+  .steps-band{background:var(--cream)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .step .num{font-family:Georgia,serif;font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1}
+  .step h3{font-size:1.05rem;margin:12px 0 6px}
+  .step p{font-size:.92rem;color:var(--muted)}
+
+  /* catering band */
+  .cater{background:#33200F;color:#F7E9D7}
+  .cater .wrap{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;padding-top:52px;padding-bottom:52px}
+  .cater h2{font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:8px}
+  .cater p{max-width:480px;color:#D9C3A6}
+
+  /* reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .stars{color:var(--accent);letter-spacing:2px;margin-bottom:10px}
+  .rev q{font-size:.95rem;display:block;margin-bottom:14px}
+  .rev .who{font-size:.85rem;font-weight:700;color:var(--muted)}
+
+  /* visit */
+  .visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+  .info-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+  .info-card h3{font-family:Georgia,serif;font-size:1.3rem;margin-bottom:14px}
+  .kv{display:grid;grid-template-columns:96px 1fr;gap:6px 14px;font-size:.95rem}
+  .kv dt{font-weight:800;color:var(--muted)}
+  .kv dd a{color:var(--accent);font-weight:700;text-decoration:none}
+  .visit-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+  .map-card{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(140deg,#FBEAD4,#F6DDC0);min-height:320px;display:flex;align-items:flex-end;position:relative}
+  .map-card .pin{position:absolute;top:38%;left:50%;transform:translateX(-50%);text-align:center}
+  .map-card .pin .dot{width:18px;height:18px;border-radius:50%;background:var(--accent);margin:0 auto;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+  .map-card .pin small{display:block;margin-top:8px;font-weight:700;background:#fff;border-radius:999px;padding:4px 12px;font-size:.78rem;box-shadow:var(--shadow)}
+  .map-card .go{width:100%;background:rgba(255,255,255,.9);backdrop-filter:blur(4px);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-weight:700;color:var(--accent-dark)}
+
+  footer{background:#2A190B;color:#CBA987;padding:34px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+  footer b{color:#F3E2CE}
+  footer a{color:#FFB27A;text-decoration:none}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* mobile sticky cta */
+  .sticky-cta{display:none}
+
+  @media(max-width:900px){
+    .menu-grid,.rev-grid,.steps{grid-template-columns:repeat(2,1fr)}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:680px){
+    .nav-links,.nav .btn{display:none}
+    .burger{display:block}
+    .menu-grid,.rev-grid,.steps{grid-template-columns:1fr}
+    .hero-inner{padding:76px 0 84px}
+    section{padding:56px 0}
+    .facts .wrap{flex-direction:column;gap:8px}
+    .facts span+span{border-left:0;padding-left:0}
+    body.has-cta{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+    .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px}
+    .sticky-cta .btn{flex:1;text-align:center;padding:13px 8px}
+  }
+</style>
+<style>.demo-note{background:#111;color:#ddd;font:13px/1.5 system-ui,sans-serif;text-align:center;padding:10px 14px}.demo-note a{color:#9be89f}</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg width="30" height="30" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#C94F14"/><path d="M10 20h12a6 6 0 0 1-12 0z" fill="#fff"/><path d="M13 13c0-2 1-2 1-4M17 13c0-2 1-2 1-4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      Kusina ni Aling Rosa
+    </a>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#order">Paano Umorder</a>
+      <a href="#salo-salo">Bilao &amp; Handaan</a>
+      <a href="#visit">Saan Kami</a>
+    </nav>
+    <a class="btn btn-solid" href="#visit">Umorder Ngayon</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('mm').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="#menu">Menu</a>
+    <a href="#order">Paano Umorder</a>
+    <a href="#salo-salo">Bilao &amp; Handaan</a>
+    <a href="#visit">Saan Kami</a>
+    <a class="btn btn-solid" href="#demo-note">Tawag: 0900 000 0000</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <img class="bg" src="img/hero.jpg" alt="Mga putahe ng Kusina ni Aling Rosa" fetchpriority="high">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Carinderia &middot; Project 4, Quezon City</span>
+    <h1 class="display">Masarap na ulam,<br>handa bago ka pa magutom.</h1>
+    <p class="sub">Lutong bahay araw-araw, simula 6AM. Umorder sa Facebook o text, pick-up o deliver namin sa loob ng barangay.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#menu">Today's Menu</a>
+      <a class="btn btn-ghost-light" href="https://www.facebook.com" rel="noopener">Order sa Messenger</a>
+    </div>
+    <div class="chips">
+      <span class="chip">Mon to Sat &middot; 6AM to 8PM</span>
+      <span class="chip">GCash accepted</span>
+      <span class="chip">Deliver sa barangay</span>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <span>&#127869; Ulam starts at &#8369;60</span>
+    <span>&#128230; Bilao orders: 24h lead time</span>
+    <span>&#128666; Delivery sa loob ng Project 4</span>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="display">Ang Menu Ngayon</h2>
+      <p>Luto lahat ng madaling-araw. Kapag ubos na ang paborito mo, bukas ulit. I-post namin sa Facebook page ang complete list tuwing 6AM.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="dish reveal"><div class="dish-row"><span class="name">Adobong Manok</span><span class="dots"></span><span class="price">&#8369;90</span></div><p>Binabaw sa toyo, suka, at laurel hanggang lumambot. Patok tuwing Lunes.</p></article>
+      <article class="dish reveal"><div class="dish-row"><span class="name">Sinigang na Baboy</span><span class="dots"></span><span class="price">&#8369;110</span></div><p>Sampalok na maasim-tamas, may gabi at kangkong. Solo o may extra sabaw.</p></article>
+      <article class="dish reveal"><div class="dish-row"><span class="name">Inihaw na Bangus</span><span class="dots"></span><span class="price">&#8369;120</span></div><p>Tinulusan, pinalamnan ng kamatis at sibuyas, iniihaw sa uling.</p></article>
+      <article class="dish reveal"><div class="dish-row"><span class="name">Pancit Guisado</span><span class="dots"></span><span class="price">&#8369;60</span></div><p>Solo serving. May bilao din para sa pag-share, tingnan sa ibaba.</p></article>
+      <article class="dish reveal"><div class="dish-row"><span class="name">Lumpiang Shanghai</span><span class="dots"></span><span class="price">&#8369;50</span></div><p>5 piraso, mainit-init pa pagdating sa inyo. Saw-sawan kasama na.</p></article>
+      <article class="dish reveal"><div class="dish-row"><span class="name">Kanin</span><span class="dots"></span><span class="price">&#8369;15</span></div><p>Plain o garlic. Lugi ka sa garlic, sobrang sulit talaga.</p></article>
+    </div>
+    <p class="menu-note">Nag-iiba ang ulam araw-araw. Sundan kami sa Facebook para malaman ang list bago ka pa lumabas ng bahay.</p>
+  </div>
+</section>
+
+<section class="steps-band" id="order">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="display">Paano Umorder</h2>
+      <p>Apat na minuto galing text, nasa counter na ang pack niyo. Ganito lang ka-simple.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Message o text ka</h3><p>Send sa aming Facebook page o i-text si Aling Rosa sa 0900 000 0000. Sabihin lang ang ulam at ilang orders.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Kumpirmahin ang total</h3><p>Ireplay namin ang total at pickup time. Para sa bilao at malalaking order, 50% GCash deposit.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Pickup o delivery</h3><p>Sundot mo sa stall, o ipa-deliver namin sa loob ng barangay. Konting bayad lang sa motor.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cater" id="salo-salo">
+  <div class="wrap">
+    <div>
+      <h2 class="display">Bilao &amp; Handaan Packages</h2>
+      <p>Binyag, birthday, office potluck, fiesta. Pancit bilao mula &#8369;280 at party trays mula &#8369;1,800, kumpleto na may kanin at sawsawan. Isang araw na lead time.</p>
+    </div>
+    <a class="btn btn-solid" href="https://www.facebook.com" rel="noopener">Tanongin ang Package</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 class="display">Sabi ng mga suki</h2>
+    </div>
+    <div class="rev-grid">
+      <figure class="rev reveal"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote><q>Yung sinigang nila ang tumalon sa panahon ng exam week ko. Three times a week ako dito, hindi ako nagsasawa.</q></blockquote><figcaption class="who">Mariel, estudyante</figcaption></figure>
+      <figure class="rev reveal"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote><q>Ordered pancit bilao for our office potluck. Ubos in 10 minutes. Nag-order ulit kami next meeting.</q></blockquote><figcaption class="who">Sir Randy, team lead sa malapit na office</figcaption></figure>
+      <figure class="rev reveal"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote><q>Aling Rosa remembers my usual. Adobo extra sauce, dalawang kanin. Parang family na kami.</q></blockquote><figcaption class="who">Kuya Ben, tricycle driver</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="steps-band" id="visit">
+  <div class="wrap visit-grid">
+    <dl class="info-card reveal">
+      <h3>Puntahan Kami</h3>
+      <dt>Saan</dt><dd>12 Sampaguita St., cor. Mahogany, Project 4, Quezon City (kanto lang, may pula awning)</dd>
+      <dt>Oras</dt><dd>Lunes to Sabado 6:00AM to 8:00PM<br>Linggo 7:00AM to 2:00PM</dd>
+      <dt>Tawag/Text</dt><dd><a href="#demo-note">0900 000 0000</a></dd>
+      <dt>Messenger</dt><dd><a href="https://www.facebook.com" rel="noopener">Kusina ni Aling Rosa FB Page</a></dd>
+      <dt>Bayad</dt><dd>Cash o GCash sa counter</dd>
+    </dl>
+    <div class="map-card reveal">
+      <div class="pin"><span class="dot"></span><small>12 Sampaguita St., Proj. 4, QC</small></div>
+      <a class="go" href="https://maps.google.com/?q=Project+4+Quezon+City" rel="noopener"><span>Google Maps</span><span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Kusina ni Aling Rosa</b><br>Lutong bahay sa Project 4, Quezon City</div>
+    <div>&copy; <span id="yr">2026</span> Kusina ni Aling Rosa<br>Site by <a href="../" rel="noopener">Sulit Sites</a></div>
+  </div>
+</footer>
+<div class="demo-note" id="demo-note">Sample / demo concept by <a href="../">Sulit Sites</a>. Kusina ni Aling Rosa is a fictional business; this is not the official website of any real business. Names, addresses, prices and contact numbers are made up, and call/text buttons are disabled in this demo.</div>
+
+
+<div class="sticky-cta">
+  <a class="btn btn-outline" href="#demo-note">&#128222; Tawag</a>
+  <a class="btn btn-solid" href="https://www.facebook.com" rel="noopener">Umorder sa FB</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const io=('IntersectionObserver'in window)?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
+  document.querySelectorAll('.reveal').forEach(el=>{io?io.observe(el):el.classList.add('in')});
+</script>
+</body>
+</html>

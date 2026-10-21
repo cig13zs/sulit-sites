@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glambox Studio Salon — Balayage &amp; Rebond Specialists, Project 6, QC</title>
+<meta name="description" content="Glambox Studio Salon, Project 6 Quezon City. Balayage from ₱1,800, rebond from ₱2,500, Japanese perm. Senior stylist every day. Walk-ins welcome.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%238A2D4A'/%3E%3Cpath d='M10 22c0-7 5-12 12-12-1 7-5 11-12 12z' fill='%23F4C95D'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#FFF9FA; --ink:#33202A; --muted:#8A707B; --line:#F0DEE4;
+    --wine:#8A2D4A; --wine-deep:#641E35; --gold:#B98A2F; --blush:#FBEDEF;
+    --shadow:0 12px 30px rgba(138,45,74,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+  .display{font-family:Georgia,"Times New Roman",serif;line-height:1.15;letter-spacing:-.01em}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;border:2px solid transparent;transition:transform .15s ease;cursor:pointer}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-solid{background:var(--wine);color:#fff;box-shadow:0 6px 16px rgba(138,45,74,.28)}
+  .btn-solid:hover{background:var(--wine-deep)}
+  .btn-outline{border-color:var(--wine);color:var(--wine)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,249,250,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-weight:700;font-size:1.08rem;text-decoration:none}
+  .nav-links{display:flex;gap:26px;font-size:.93rem}
+  .nav-links a{text-decoration:none;color:var(--muted);font-weight:600}
+  .nav-links a:hover{color:var(--wine)}
+  .burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+  .burger span{display:block;height:2.5px;background:var(--ink);margin:6px 8px;border-radius:2px}
+  .mobile-menu{display:none;border-top:1px solid var(--line);padding:14px 22px 20px;flex-direction:column;gap:14px;background:var(--bg)}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{text-decoration:none;font-weight:700}
+
+  .hero{position:relative;color:#fff;overflow:hidden}
+  .hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(51,17,30,.88) 10%,rgba(51,17,30,.55) 50%,rgba(51,17,30,.2))}
+  .hero-inner{position:relative;z-index:2;padding:110px 0 120px}
+  .eyebrow{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:#F4C95D;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.3rem,5.2vw,3.6rem);max-width:720px;margin-bottom:18px;color:#FFF6EE}
+  .hero p.sub{max-width:520px;font-size:1.07rem;color:#F0DBCF;margin-bottom:30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .chip{font-size:.83rem;font-weight:600;background:rgba(255,249,250,.13);border:1px solid rgba(255,249,250,.32);border-radius:999px;padding:6px 14px;color:#FFE9DC}
+
+  section{padding:76px 0}
+  .sec-head{margin-bottom:36px}
+  .sec-head h2{font-size:clamp(1.75rem,3.4vw,2.4rem);margin-bottom:8px}
+  .sec-head p{color:var(--muted);max-width:600px}
+  .sec-head.center{text-align:center}
+  .sec-head.center p{margin:0 auto}
+
+  /* price cards */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+  .svc .tagline{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .svc h3{font-family:Georgia,serif;font-size:1.25rem;margin-bottom:6px}
+  .svc p{font-size:.92rem;color:var(--muted);min-height:44px}
+  .svc .from{display:inline-block;margin-top:14px;font-weight:800;color:var(--wine);border-top:1px dashed var(--line);width:100%;padding-top:12px}
+
+  .band{background:var(--blush)}
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.pt{width:100%;min-width:520px;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .pt th,.pt td{text-align:left;padding:14px 22px;font-size:.94rem}
+  .pt th{background:var(--wine);color:#fff;font-weight:700;font-size:.83rem;letter-spacing:.08em;text-transform:uppercase}
+  .pt tr+tr td{border-top:1px solid var(--line)}
+  .pt td:nth-child(2){font-weight:800;color:var(--wine);white-space:nowrap}
+  .pt td:last-child{color:var(--muted);font-size:.87rem}
+  .pt-note{margin-top:14px;font-size:.88rem;color:var(--muted)}
+
+  .stylists{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .stylist{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center}
+  .avatar{width:76px;height:76px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:1.6rem;font-weight:700;color:#fff}
+  .a1{background:linear-gradient(135deg,#8A2D4A,#C05C7E)}
+  .a2{background:linear-gradient(135deg,#B98A2F,#E0B15E)}
+  .a3{background:linear-gradient(135deg,#5B2333,#94465C)}
+  .stylist h3{font-family:Georgia,serif;font-size:1.15rem}
+  .stylist small{color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem}
+  .stylist p{font-size:.9rem;color:var(--muted);margin-top:8px}
+
+  .ig-band{background:var(--wine-deep);color:#F6DFE7}
+  .ig-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:52px;padding-bottom:52px}
+  .ig-band h2{color:#fff;margin-bottom:6px}
+  .ig-band p{max-width:520px;color:#D9A9BC}
+
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .info-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--shadow)}
+  .info-card h3{font-family:Georgia,serif;font-size:1.35rem;margin-bottom:16px}
+  .kv{display:grid;grid-template-columns:96px 1fr;gap:8px 14px;font-size:.95rem}
+  .kv dt{font-weight:800;color:var(--muted)}
+  .kv dd a{color:var(--wine);font-weight:700;text-decoration:none}
+  .walkin{margin-top:18px;background:var(--blush);border-radius:14px;padding:14px 18px;font-size:.92rem}
+  .map-card{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(140deg,#FBEDF0,#F5DCE3);min-height:340px;display:flex;align-items:flex-end;position:relative}
+  .map-card .pin{position:absolute;top:40%;left:50%;transform:translateX(-50%);text-align:center}
+  .map-card .dot{width:18px;height:18px;border-radius:50%;background:var(--wine);margin:0 auto;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+  .map-card small{display:block;margin-top:8px;font-weight:700;background:#fff;border-radius:999px;padding:4px 12px;font-size:.78rem;box-shadow:var(--shadow)}
+  .map-card .go{width:100%;background:rgba(255,255,255,.92);backdrop-filter:blur(4px);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-weight:700;color:var(--wine)}
+
+  footer{background:#2E1520;color:#C79AAB;padding:34px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer b{color:#FFEFE2}
+  footer a{color:#F4C95D;text-decoration:none}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+  .sticky-cta{display:none}
+
+  @media(max-width:900px){
+    .svc-grid,.stylists{grid-template-columns:repeat(2,1fr)}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:640px){
+    .nav-links,.nav .btn{display:none}
+    .burger{display:block}
+    .svc-grid,.stylists{grid-template-columns:1fr}
+    section{padding:54px 0}
+    .hero-inner{padding:80px 0 90px}
+    body.has-cta{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+    .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px}
+    .sticky-cta .btn{flex:1;text-align:center;padding:13px 8px}
+  }
+</style>
+<style>.demo-note{background:#111;color:#ddd;font:13px/1.5 system-ui,sans-serif;text-align:center;padding:10px 14px}.demo-note a{color:#9be89f}</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg width="30" height="30" viewBox="0 0 32 32"><rect width="32" height="32" rx="16" fill="#8A2D4A"/><path d="M10 22c0-7 5-12 12-12-1 7-5 11-12 12z" fill="#F4C95D"/></svg>
+      Glambox Studio
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#prices">Price List</a>
+      <a href="#team">Stylists</a>
+      <a href="#visit">Find Us</a>
+    </nav>
+    <a class="btn btn-solid" href="#visit">Book a Chair</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mm">
+    <a href="#services">Services</a>
+    <a href="#prices">Price List</a>
+    <a href="#team">Stylists</a>
+    <a href="#visit">Find Us</a>
+    <a class="btn btn-solid" href="#demo-note">Call 0900 000 0000</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <img class="bg" src="img/hero.jpg" alt="Inside Glambox Studio Salon" fetchpriority="high">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Hair Studio &middot; Project 6, Quezon City</span>
+    <h1 class="display">Your hair era,<br>without the Makati price.</h1>
+    <p class="sub">Balayage, rebond, and perms done by senior stylists, not trainees. Same techniques as the big-city salons, neighborhood prices.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#prices">See Prices</a>
+      <a class="btn btn-outline" style="border-color:rgba(255,255,255,.6);color:#fff" href="#demo-note">Book via Text</a>
+    </div>
+    <div class="chips">
+      <span class="chip">Open Tue to Sun &middot; 10AM to 8PM</span>
+      <span class="chip">Walk-ins welcome</span>
+      <span class="chip">GCash &middot; QRph accepted</span>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display">The signature three</h2>
+      <p>What most of our chairs are booked for. Free consultation before any color or treatment, walang bahala-na.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="tagline">Most booked</div>
+        <h3>Balayage</h3>
+        <p>Hand-painted highlights, blended soft, grown-out friendly. Includes toner and treatment.</p>
+        <span class="from">from &#8369;1,800</span>
+      </article>
+      <article class="svc reveal">
+        <div class="tagline">Smooth for months</div>
+        <h3>Rebond</h3>
+        <p>Straight, glass-like finish with aftercare treatment included. Priced by hair length, quoted before we start.</p>
+        <span class="from">from &#8369;2,500</span>
+      </article>
+      <article class="svc reveal">
+        <div class="tagline">Soft waves</div>
+        <h3>Japanese Perm</h3>
+        <p>Loose, natural curls that dry into shape. Digiperm look without the digiperm damage.</p>
+        <span class="from">from &#8369;3,000</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="prices">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display">Full price list</h2>
+      <p>Posted exactly like our salon mirror menu. Final quote depends on hair length and history, confirmed before any foil opens.</p>
+    </div>
+    <div class="table-scroll">
+    <table class="pt reveal">
+      <thead><tr><th>Service</th><th>Price</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Consultation</td><td>Free</td><td>Strand test included for color services</td></tr>
+        <tr><td> haircut</td><td>&#8369;180</td><td>Wash, cut, blowdry</td></tr>
+        <tr><td>Balayage</td><td>from &#8369;1,800</td><td>By length; toner included</td></tr>
+        <tr><td>Full hair color</td><td>from &#8369;1,200</td><td>Semi or permanent</td></tr>
+        <tr><td>Rebond</td><td>from &#8369;2,500</td><td>Treatment included</td></tr>
+        <tr><td>Japanese perm</td><td>from &#8369;3,000</td><td>Digiperm style available</td></tr>
+        <tr><td>Keratin treatment</td><td>from &#8369;1,800</td><td>Lasts about 3 months</td></tr>
+        <tr><td>Hair spa</td><td>&#8369;450</td><td>Massage, mask, steam</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="pt-note">Students get 10% off on weekdays, just show your ID. Bridal and entourage packages by consultation.</p>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2 class="display">Who holds the scissors</h2>
+      <p>No trainee does color here. Every chemical service is done by a senior stylist.</p>
+    </div>
+    <div class="stylists">
+      <div class="stylist reveal"><div class="avatar a1">AR</div><h3>Ate Riza</h3><small>Color Director</small><p>12 years sa industriya. The balayage hand everyone asks for by name.</p></div>
+      <div class="stylist reveal"><div class="avatar a2">JM</div><h3>Jaymar</h3><small>Rebond &amp; Treatment Lead</small><p>The calmest hands sa rebond. Has saved more bleached hair than he can count.</p></div>
+      <div class="stylist reveal"><div class="avatar a3">Shi</div><h3>Shirley</h3><small>Cuts &amp; Perm Specialist</small><p>Frame-up loyalist. If you want a Korean soft perm, book her early.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="ig-band">
+  <div class="wrap">
+    <div>
+      <h2 class="display">Fresh from our chairs</h2>
+      <p>We post every transformation (with permission) on our Facebook page. See something you like? Screenshot it and show your stylist.</p>
+    </div>
+    <a class="btn btn-solid" style="background:#F4C95D;color:#5B2333;box-shadow:none" href="https://www.facebook.com" rel="noopener">See Our Work on FB</a>
+  </div>
+</div>
+
+<section id="visit">
+  <div class="wrap visit-grid">
+    <div class="info-card reveal">
+      <h3>Visit us</h3>
+      <dl class="kv">
+        <dt>Saan</dt><dd>22 Kamias Road, Project 6, Quezon City, second floor above the laundry shop</dd>
+        <dt>Oras</dt><dd>Tue to Sun, 10:00AM to 8:00PM<br>Closed Mondays</dd>
+        <dt>Tawag</dt><dd><a href="#demo-note">0900 000 0000</a></dd>
+        <dt>Text/Viber</dt><dd><a href="#demo-note">Same number</a></dd>
+        <dt>Bayad</dt><dd>Cash, GCash, QRph</dd>
+      </dl>
+      <div class="walkin"><b>Walk-in policy:</b> booked clients go first, pero we keep two walk-in chairs daily. Text us before you leave the house to check the wait.</div>
+    </div>
+    <div class="map-card reveal">
+      <div class="pin"><span class="dot"></span><small>22 Kamias Rd., Proj. 6, QC</small></div>
+      <a class="go" href="https://maps.google.com/?q=Project+6+Quezon+City" rel="noopener"><span>Google Maps</span><span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Glambox Studio Salon</b><br>Balayage &middot; Rebond &middot; Perms &middot; Project 6, QC</div>
+    <div>&copy; <span id="yr">2026</span> Glambox Studio Salon<br>Site by <a href="../">Sulit Sites</a></div>
+  </div>
+</footer>
+<div class="demo-note" id="demo-note">Sample / demo concept by <a href="../">Sulit Sites</a>. Glambox Studio Salon is a fictional business; this is not the official website of any real business. Names, addresses, prices and contact numbers are made up, and call/text buttons are disabled in this demo.</div>
+
+
+<div class="sticky-cta">
+  <a class="btn btn-outline" href="#demo-note">&#128222; Call</a>
+  <a class="btn btn-solid" href="#demo-note">Book via Text</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const io=('IntersectionObserver'in window)?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
+  document.querySelectorAll('.reveal').forEach(el=>{io?io.observe(el):el.classList.add('in')});
+</script>
+</body>
+</html>

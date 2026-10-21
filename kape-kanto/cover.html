@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<title>Kape Kanto Cover Sample</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=Work+Sans:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  /* 1640x624 = 2x Facebook Page cover (820x312). Key content stays in the middle
+     ~1300px so the mobile crop and the profile picture don't cover it. */
+  :root{--paper:#F4EBDC;--ink:#2A1C13;--terracotta:#C0532E;--sage:#5F7A4E;--cream:#FFF9EF}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1640px;height:624px;background:var(--ink);overflow:hidden}
+  body{font-family:"Work Sans",Arial,sans-serif;position:relative;color:var(--cream)}
+  .paper{position:absolute;right:0;top:0;bottom:0;width:58%;background:var(--paper);
+    clip-path:polygon(7% 0,100% 0,100% 100%,0 100%,4% 90%,1% 78%,5% 64%,2% 50%,6% 36%,3% 22%,7% 10%)}
+  .left{position:absolute;left:170px;top:150px;width:620px}
+  .kicker{font-size:24px;letter-spacing:.32em;text-transform:uppercase;color:#E9B48F}
+  h1{font-family:Fraunces,Georgia,serif;font-size:132px;line-height:.92;letter-spacing:-.02em;margin-top:12px}
+  h1 span{color:var(--terracotta)}
+  .right{position:absolute;left:820px;top:190px;color:var(--ink)}
+  .right p{font-family:Fraunces,Georgia,serif;font-size:58px;line-height:1.05;max-width:600px}
+  .chips{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .chips span{background:var(--ink);color:var(--cream);border-radius:999px;padding:10px 22px;font-weight:700;font-size:24px}
+  .chips span.t{background:var(--terracotta)}
+  .hours{margin-top:26px;font-size:26px;font-weight:500;color:#5A4636}
+  .sample{position:absolute;right:24px;bottom:14px;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:rgba(42,28,19,.45)}
+</style>
+</head>
+<body>
+  <div class="paper"></div>
+  <div class="left">
+    <div class="kicker">U-Belt · Sampaloc</div>
+    <h1>Kape<br><span>Kanto</span></h1>
+  </div>
+  <div class="right">
+    <p>Kape at silog para sa buong barkada.</p>
+    <div class="chips"><span class="t">Silog ₱79+</span><span>Iced latte ₱95</span><span>Student promo</span></div>
+    <div class="hours">Open Mon-Sat · 7 AM to 10 PM · GCash accepted</div>
+  </div>
+  <div class="sample">Sample design · fictional café</div>
+</body>
+</html>

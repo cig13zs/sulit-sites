@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<title>Kape Kanto Menu Sample</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* 1080x1350 = Facebook/Instagram portrait post. Prints fine on A4 when scaled. */
+  :root{
+    --paper:#F4EBDC; --paper-2:#EADCC4; --ink:#2A1C13; --muted:#6B5646;
+    --terracotta:#C0532E; --sage:#5F7A4E; --cream:#FFF9EF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1080px;height:1350px;background:var(--paper)}
+  body{font-family:"Work Sans",Arial,sans-serif;color:var(--ink);position:relative;overflow:hidden}
+  .serif{font-family:Fraunces,Georgia,serif}
+
+  /* torn-paper header band */
+  .band{position:absolute;inset:0 0 auto 0;height:400px;background:var(--ink);
+    clip-path:polygon(0 0,100% 0,100% 88%,94% 92%,87% 87%,79% 93%,70% 88%,61% 94%,52% 89%,43% 95%,34% 89%,25% 94%,16% 88%,8% 93%,0 89%)}
+  .head{position:relative;padding:56px 72px 0;color:var(--cream)}
+  .kicker{font-size:22px;letter-spacing:.32em;text-transform:uppercase;color:#E9B48F;font-weight:500}
+  .name{font-size:108px;line-height:.95;font-weight:800;letter-spacing:-.02em;margin-top:10px}
+  .name span{color:var(--terracotta)}
+  .tag{font-size:26px;margin-top:14px;color:#D9CBB6}
+
+  .stamp{position:absolute;right:66px;top:58px;width:170px;height:170px;border-radius:50%;
+    background:var(--terracotta);color:var(--cream);display:grid;place-items:center;text-align:center;
+    transform:rotate(-9deg);box-shadow:0 0 0 6px var(--ink),0 0 0 9px var(--terracotta)}
+  .stamp b{display:block;font-family:Fraunces,Georgia,serif;font-size:44px;line-height:1}
+  .stamp small{font-size:17px;letter-spacing:.08em;text-transform:uppercase;line-height:1.25}
+
+  .grid{position:absolute;top:424px;left:72px;right:72px;display:grid;grid-template-columns:1fr 1fr;gap:24px 56px}
+  .sec h2{font-family:Fraunces,Georgia,serif;font-size:40px;font-weight:800;display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .sec h2::after{content:"";flex:1;height:3px;background:var(--ink);opacity:.18;border-radius:2px}
+  .sec h2 i{font-style:normal;font-size:18px;font-family:"Work Sans",sans-serif;font-weight:700;
+    background:var(--sage);color:var(--cream);padding:5px 12px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase}
+  .item{display:flex;align-items:baseline;gap:10px;font-size:28px;padding:6px 0}
+  .item .dots{flex:1;border-bottom:3px dotted rgba(42,28,19,.28);transform:translateY(-6px)}
+  .item .p{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:32px}
+  .item small{display:block;font-size:19px;color:var(--muted);margin-top:2px}
+  .item .label{max-width:330px}
+  .best{color:var(--terracotta)}
+
+  .card{background:var(--paper-2);border-radius:22px;padding:24px 28px;position:relative}
+  .card::before{content:"";position:absolute;inset:8px -8px -8px 8px;border-radius:22px;background:rgba(42,28,19,.12);z-index:-1}
+
+  .promo{grid-column:1/-1;display:flex;align-items:center;gap:26px;background:var(--sage);color:var(--cream);
+    border-radius:22px;padding:24px 32px;margin-top:4px}
+  .promo b{font-family:Fraunces,Georgia,serif;font-size:38px;line-height:1.05}
+  .promo p{font-size:23px;opacity:.92}
+
+  .foot{position:absolute;left:72px;right:72px;bottom:54px;display:flex;justify-content:space-between;align-items:flex-end;font-size:22px;color:var(--muted)}
+  .foot strong{color:var(--ink);font-weight:700}
+  .pay{display:flex;gap:10px}
+  .pay span{border:2.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:5px 16px;font-weight:700;font-size:19px}
+
+  .sample{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-size:15px;letter-spacing:.14em;
+    text-transform:uppercase;color:rgba(42,28,19,.45)}
+</style>
+<style>.demo-note{background:#111;color:#ddd;font:13px/1.5 system-ui,sans-serif;text-align:center;padding:10px 14px}.demo-note a{color:#9be89f}</style>
+</head>
+<body>
+  <div class="band"></div>
+  <header class="head">
+    <div class="kicker">U-Belt · Sampaloc</div>
+    <h1 class="name serif">Kape<br><span>Kanto</span></h1>
+    <p class="tag">Kape, silog, at tambayan pagkatapos ng klase.</p>
+  </header>
+  <div class="stamp"><div><small>Student<br>budget</small><b>₱45+</b></div></div>
+
+  <main class="grid">
+    <section class="sec card">
+      <h2>Kape <i>Hot / Iced</i></h2>
+      <div class="item"><span class="label">Kapeng Barako</span><span class="dots"></span><span class="p">₱65</span></div>
+      <div class="item"><span class="label best">Iced Spanish Latte<small>Best seller</small></span><span class="dots"></span><span class="p">₱95</span></div>
+      <div class="item"><span class="label">Sea Salt Latte</span><span class="dots"></span><span class="p">₱115</span></div>
+      <div class="item"><span class="label">Caramel Macchiato</span><span class="dots"></span><span class="p">₱110</span></div>
+    </section>
+
+    <section class="sec card">
+      <h2>Hindi Kape</h2>
+      <div class="item"><span class="label">Matcha Latte</span><span class="dots"></span><span class="p">₱110</span></div>
+      <div class="item"><span class="label">Ube Milk</span><span class="dots"></span><span class="p">₱95</span></div>
+      <div class="item"><span class="label">Iced Tsokolate</span><span class="dots"></span><span class="p">₱85</span></div>
+      <div class="item"><span class="label">Calamansi Soda</span><span class="dots"></span><span class="p">₱70</span></div>
+    </section>
+
+    <section class="sec">
+      <h2>Silog <i>All day</i></h2>
+      <div class="item"><span class="label best">Tapsilog<small>Garlic rice + itlog</small></span><span class="dots"></span><span class="p">₱99</span></div>
+      <div class="item"><span class="label">Longsilog</span><span class="dots"></span><span class="p">₱89</span></div>
+      <div class="item"><span class="label">Chicken Pastil Bowl</span><span class="dots"></span><span class="p">₱79</span></div>
+    </section>
+
+    <section class="sec">
+      <h2>Tinapay</h2>
+      <div class="item"><span class="label">Ensaymada</span><span class="dots"></span><span class="p">₱45</span></div>
+      <div class="item"><span class="label">Banana Bread</span><span class="dots"></span><span class="p">₱55</span></div>
+      <div class="item"><span class="label">Pandesal + Kesong Puti</span><span class="dots"></span><span class="p">₱60</span></div>
+    </section>
+
+    <div class="promo">
+      <b>Show your school ID</b>
+      <p>Free extra shot or pandesal with any drink, Monday to Friday before 10 AM.</p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div><strong>Open Mon-Sat · 7 AM to 10 PM</strong><br>Dine-in · Take-out · Grab &amp; Foodpanda</div>
+    <div class="pay"><span>GCash</span><span>Maya</span><span>Cash</span></div>
+  </footer>
+  <div class="sample">Sample design · Kape Kanto is a fictional café</div>
+<p class="demo-note" style="margin-top:20px">Sample menu design by <a href="../">Sulit Sites</a>. Kape Kanto is a fictional café. <a href="cover.html">See the matching cover design</a>.</p>
+</body>
+</html>
